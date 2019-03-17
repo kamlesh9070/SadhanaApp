@@ -1,0 +1,1 @@
+alter table Repetitions add column remark text;
