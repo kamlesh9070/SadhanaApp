@@ -24,7 +24,7 @@
     android:layout_height="match_parent"
     >
 
-    <org.purecelibacy.sadhana.activities.habits.show.views.BarCard
+    <org.youth.sadhana.activities.habits.show.views.BarCard
         android:id="@+id/barCard"
         style="@style/Card"
         android:gravity="center"/>

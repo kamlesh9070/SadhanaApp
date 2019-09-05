@@ -39,7 +39,7 @@ android {
         minSdkVersion MIN_SDK_VERSION as Integer
         targetSdkVersion TARGET_SDK_VERSION as Integer
 
-        applicationId "org.purecelibacy.sadhana"
+        applicationId "org.youth.sadhana"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {

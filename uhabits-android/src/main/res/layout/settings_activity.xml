@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        android:name="org.purecelibacy.sadhana.activities.settings.SettingsFragment"
+        android:name="org.youth.sadhana.activities.settings.SettingsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"

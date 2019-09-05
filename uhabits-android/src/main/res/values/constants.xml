@@ -20,12 +20,12 @@
 <resources>
     <string name="helpURL">http://loophabits.org/faq.html</string>
     <string name="playStoreURL">market://details?id=org.isoron.uhabits</string>
-    <string name="feedbackURL" formatted="false">mailto:mbaapps@googlegroups.com?subject=Feedback%20about%20Sadhana%20App%20</string>
-    <string name="bugReportURL" formatted="false">mailto:mbaapps@googlegroups.com?subject=Bug%20Report%20-%20Sadhana%20App%20</string>
-    <string name="sourceCodeURL">http://purecelibacy.org/</string>
+    <string name="feedbackURL" formatted="false">mailto:youth.admin@dadabhagwan.org?subject=Feedback%20about%20Charge%20Yourself%20App%20</string>
+    <string name="bugReportURL" formatted="false">mailto:youth.admin@dadabhagwan.org?subject=Bug%20Report%20-%20Charge%20Yourself%20App%20</string>
+    <string name="sourceCodeURL">http://youth.dadabhagwan.org/</string>
     <string name="translateURL">http://translate.loophabits.org/</string>
-    <string name="bugReportTo">mbaapps@googlegroups.com</string>
-    <string name="bugReportSubject">Bug Report - Sadhana App</string>
+    <string name="bugReportTo">youth.admin@dadabhagwan.org</string>
+    <string name="bugReportSubject">Bug Report - Charge Yourself App</string>
 
     <string-array name="snooze_interval_names">
         <item>@string/interval_15_minutes</item>

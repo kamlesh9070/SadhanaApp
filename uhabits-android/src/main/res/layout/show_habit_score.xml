@@ -42,7 +42,7 @@
             android:layout_alignParentTop="true"
             android:text="@string/score"/>
 
-        <org.purecelibacy.sadhana.activities.common.views.ScoreChart
+        <org.youth.sadhana.activities.common.views.ScoreChart
             android:id="@+id/scoreView"
             android:layout_width="match_parent"
             android:layout_height="220dp"

@@ -24,7 +24,7 @@
         style="@style/CardHeader"
         android:text="@string/frequency"/>
 
-    <org.purecelibacy.sadhana.activities.common.views.FrequencyChart
+    <org.youth.sadhana.activities.common.views.FrequencyChart
         android:id="@+id/frequencyChart"
         android:layout_width="match_parent"
         android:layout_height="200dp"/>

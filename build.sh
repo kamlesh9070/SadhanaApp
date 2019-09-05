@@ -18,7 +18,7 @@
 ADB="${ANDROID_HOME}/platform-tools/adb"
 EMULATOR="${ANDROID_HOME}/tools/emulator"
 GRADLE="./gradlew --stacktrace"
-PACKAGE_NAME=org.purecelibacy.sadhana
+PACKAGE_NAME=org.youth.sadhana
 OUTPUTS_DIR=uhabits-android/build/outputs
 
 if [ ! -f "${ANDROID_HOME}/platform-tools/adb" ]; then

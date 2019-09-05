@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="2">
 
-        <org.purecelibacy.sadhana.activities.habits.edit.views.ExampleEditText
+        <org.youth.sadhana.activities.habits.edit.views.ExampleEditText
             android:id="@+id/tvUnit"
             style="@style/dialogFormInput"
             android:layout_width="match_parent"

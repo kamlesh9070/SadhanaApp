@@ -29,7 +29,7 @@
         style="@style/CardHeader"
         android:text="@string/history"/>
 
-    <org.purecelibacy.sadhana.activities.common.views.BarChart
+    <org.youth.sadhana.activities.common.views.BarChart
         android:id="@+id/barChart"
         android:layout_width="match_parent"
         android:layout_height="220dp"/>

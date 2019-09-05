@@ -18,7 +18,7 @@
   ~ with this program. If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest
-    package="org.purecelibacy.sadhana"
+    package="org.youth.sadhana"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -36,9 +36,9 @@
 
 
     <application
-        android:name="org.purecelibacy.sadhana.HabitsApplication"
+        android:name="org.youth.sadhana.HabitsApplication"
         android:allowBackup="true"
-        android:backupAgent="org.purecelibacy.sadhana.HabitsBackupAgent"
+        android:backupAgent="org.youth.sadhana.HabitsBackupAgent"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/main_activity_title"
         android:supportsRtl="true"
@@ -48,7 +48,7 @@
             android:value="AEdPqrEAAAAI6aeWncbnMNo8E5GWeZ44dlc5cQ7tCROwFhOtiw"/>
 
         <activity
-            android:name="org.purecelibacy.sadhana.activities.habits.list.ListHabitsActivity"
+            android:name="org.youth.sadhana.activities.habits.list.ListHabitsActivity"
             android:exported="true"
             android:label="@string/main_activity_title"
             android:launchMode="singleTop"/>
@@ -57,7 +57,7 @@
             android:name=".MainActivity"
             android:label="@string/main_activity_title"
             android:launchMode="singleTop"
-            android:targetActivity="org.purecelibacy.sadhana.activities.habits.list.ListHabitsActivity">
+            android:targetActivity="org.youth.sadhana.activities.habits.list.ListHabitsActivity">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -66,49 +66,49 @@
         </activity-alias>
 
         <activity
-            android:name="org.purecelibacy.sadhana.activities.habits.show.ShowHabitActivity"
+            android:name="org.youth.sadhana.activities.habits.show.ShowHabitActivity"
             android:label="@string/title_activity_show_habit">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.purecelibacy.sadhana.activities.habits.list.ListHabitsActivity"/>
+                android:value="org.youth.sadhana.activities.habits.list.ListHabitsActivity"/>
         </activity>
         <activity
-            android:name="org.purecelibacy.sadhana.activities.settings.SettingsActivity"
+            android:name="org.youth.sadhana.activities.settings.SettingsActivity"
             android:label="@string/settings">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.purecelibacy.sadhana.activities.habits.list.ListHabitsActivity"/>
+                android:value="org.youth.sadhana.activities.habits.list.ListHabitsActivity"/>
         </activity>
         <activity
-            android:name="org.purecelibacy.sadhana.activities.intro.IntroActivity"
+            android:name="org.youth.sadhana.activities.intro.IntroActivity"
             android:label=""
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="org.purecelibacy.sadhana.widgets.HabitPickerDialog"
+            android:name="org.youth.sadhana.widgets.HabitPickerDialog"
             android:theme="@style/Theme.AppCompat.Light.Dialog">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="org.purecelibacy.sadhana.activities.about.AboutActivity"
+            android:name="org.youth.sadhana.activities.about.AboutActivity"
             android:label="@string/about">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.purecelibacy.sadhana.activities.habits.list.ListHabitsActivity"/>
+                android:value="org.youth.sadhana.activities.habits.list.ListHabitsActivity"/>
         </activity>
 
         <activity
-            android:name="org.purecelibacy.sadhana.activities.intro.ProfileActivity"
+            android:name="org.youth.sadhana.activities.intro.ProfileActivity"
             android:label="@string/about">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.purecelibacy.sadhana.activities.habits.list.ListHabitsActivity"/>
+                android:value="org.youth.sadhana.activities.habits.list.ListHabitsActivity"/>
         </activity>
 
         <receiver
-            android:name="org.purecelibacy.sadhana.widgets.CheckmarkWidgetProvider"
+            android:name="org.youth.sadhana.widgets.CheckmarkWidgetProvider"
             android:label="@string/checkmark">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
@@ -119,7 +119,7 @@
                 android:resource="@xml/widget_checkmark_info"/>
         </receiver>
         <receiver
-            android:name="org.purecelibacy.sadhana.widgets.HistoryWidgetProvider"
+            android:name="org.youth.sadhana.widgets.HistoryWidgetProvider"
             android:label="@string/history">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
@@ -130,7 +130,7 @@
                 android:resource="@xml/widget_history_info"/>
         </receiver>
         <receiver
-            android:name="org.purecelibacy.sadhana.widgets.ScoreWidgetProvider"
+            android:name="org.youth.sadhana.widgets.ScoreWidgetProvider"
             android:label="@string/habit_strength">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
@@ -141,7 +141,7 @@
                 android:resource="@xml/widget_score_info"/>
         </receiver>
         <receiver
-            android:name="org.purecelibacy.sadhana.widgets.StreakWidgetProvider"
+            android:name="org.youth.sadhana.widgets.StreakWidgetProvider"
             android:label="@string/streaks">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
@@ -152,7 +152,7 @@
                 android:resource="@xml/widget_streak_info"/>
         </receiver>
         <receiver
-            android:name="org.purecelibacy.sadhana.widgets.FrequencyWidgetProvider"
+            android:name="org.youth.sadhana.widgets.FrequencyWidgetProvider"
             android:label="@string/frequency">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
@@ -162,44 +162,44 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_frequency_info"/>
         </receiver>
-        <receiver android:name="org.purecelibacy.sadhana.receivers.ReminderReceiver">
+        <receiver android:name="org.youth.sadhana.receivers.ReminderReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-        <receiver android:name="org.purecelibacy.sadhana.receivers.WidgetReceiver">
+        <receiver android:name="org.youth.sadhana.receivers.WidgetReceiver">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
 
-                <action android:name="org.purecelibacy.sadhana.ACTION_TOGGLE_REPETITION"/>
+                <action android:name="org.youth.sadhana.ACTION_TOGGLE_REPETITION"/>
 
                 <data
-                    android:host="org.purecelibacy.sadhana"
+                    android:host="org.youth.sadhana"
                     android:scheme="content"/>
             </intent-filter>
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
 
-                <action android:name="org.purecelibacy.sadhana.ACTION_ADD_REPETITION"/>
+                <action android:name="org.youth.sadhana.ACTION_ADD_REPETITION"/>
 
                 <data
-                    android:host="org.purecelibacy.sadhana"
+                    android:host="org.youth.sadhana"
                     android:scheme="content"/>
             </intent-filter>
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
 
-                <action android:name="org.purecelibacy.sadhana.ACTION_REMOVE_REPETITION"/>
+                <action android:name="org.youth.sadhana.ACTION_REMOVE_REPETITION"/>
 
                 <data
-                    android:host="org.purecelibacy.sadhana"
+                    android:host="org.youth.sadhana"
                     android:scheme="content"/>
             </intent-filter>
         </receiver>
 
         <!-- Locale/Tasker -->
         <activity
-            android:name="org.purecelibacy.sadhana.automation.EditSettingActivity"
+            android:name="org.youth.sadhana.automation.EditSettingActivity"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name">
@@ -210,7 +210,7 @@
 
         <!-- Locale/Tasker -->
         <receiver
-            android:name="org.purecelibacy.sadhana.automation.FireSettingReceiver"
+            android:name="org.youth.sadhana.automation.FireSettingReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING"/>
@@ -219,7 +219,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="org.purecelibacy.sadhana"
+            android:authorities="org.youth.sadhana"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -229,7 +229,7 @@
 
 
         <service
-            android:name="org.purecelibacy.sadhana.sync.SyncService"
+            android:name="org.youth.sadhana.sync.SyncService"
             android:enabled="true"
             android:exported="false">
         </service>

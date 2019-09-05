@@ -10,7 +10,7 @@
         app:popupTheme="?toolbarPopupTheme"
         style="@style/Toolbar"/>-->
 
-    <fragment android:name="org.purecelibacy.sadhana.activities.intro.LoginFragment"
+    <fragment android:name="org.youth.sadhana.activities.intro.LoginFragment"
         android:id="@+id/headlines_fragment"
         android:layout_weight="1"
         android:layout_width="0dp"

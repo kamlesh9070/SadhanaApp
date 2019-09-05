@@ -42,7 +42,7 @@
             android:layout_alignParentTop="true"
             android:text="@string/checkmarksummary"/>
 
-        <org.purecelibacy.sadhana.activities.common.views.CheckmarkSummaryChart
+        <org.youth.sadhana.activities.common.views.CheckmarkSummaryChart
             android:id="@+id/checkmarkView"
             android:layout_width="match_parent"
             android:layout_height="220dp"

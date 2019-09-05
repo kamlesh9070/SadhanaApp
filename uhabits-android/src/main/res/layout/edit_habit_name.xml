@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <org.purecelibacy.sadhana.activities.habits.edit.views.ExampleEditText
+        <org.youth.sadhana.activities.habits.edit.views.ExampleEditText
             android:id="@+id/tvDescription"
             style="@style/dialogFormInputMultiline"
             android:layout_width="match_parent"
