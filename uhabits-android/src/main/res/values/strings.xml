@@ -19,8 +19,8 @@
   -->
 
 <resources>
-    <string name="app_name">Charge Yourself</string>
-    <string name="main_activity_title">Charge Yourself</string>
+    <string name="app_name">Fuzion</string>
+    <string name="main_activity_title">Fuzion</string>
     <string name="action_settings">Settings</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>

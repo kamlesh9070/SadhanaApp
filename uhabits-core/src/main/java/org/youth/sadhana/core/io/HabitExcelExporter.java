@@ -189,12 +189,12 @@ public class HabitExcelExporter {
         Row row = sheet.createRow(rowNum);
 
         List<String> headerDatas = new ArrayList<String>();
-        headerDatas.add("Month: "+month);
+        //headerDatas.add("Month: "+month);
         //headerDatas.add(month);
         headerDatas.add("Center :"+ preferences.getMBACenter());
         //headerDatas.add(preferences.getMBACenter());
         headerDatas.add("Name: "+ preferences.getFirstName() + " " + preferences.getLastName());
-        headerDatas.add("Mahahatma Id: "+ preferences.getMahatmaId());
+        headerDatas.add("Mobile: "+ preferences.getMahatmaId());
         //headerDatas.add(preferences.getFirstName() + " " + preferences.getLastName());
         //writeHeaderData(row,headerDatas);
         int column = 0;

@@ -73,7 +73,7 @@
                 android:id="@+id/tvFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="First Name*"
+                android:hint="First Name *"
                 android:inputType="textPersonName"
                 android:textColor="@android:color/white"
                 android:textColorHighlight="@color/yellow_400" />
@@ -92,7 +92,7 @@
                 android:id="@+id/tvLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Surname*"
+                android:hint="Last Name *"
                 android:inputType="textPersonName"
                 android:textColor="@android:color/white"
                 android:textColorHighlight="@android:color/white"
@@ -111,7 +111,7 @@
                 android:id="@+id/mba_center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="MBA Center*"
+                android:hint="Center *"
                 android:inputType="text"
                 android:textColor="@android:color/white" />
 
@@ -130,9 +130,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Mahatma ICard No.*"
-                android:inputType="text"
-                android:maxLength="12"
+                android:hint="Mobile *"
+                android:inputType="number"
+                android:maxLength="10"
                 android:textColor="@android:color/white" />
         </android.support.design.widget.TextInputLayout>
 

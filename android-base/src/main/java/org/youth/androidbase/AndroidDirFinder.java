@@ -46,7 +46,7 @@ public class AndroidDirFinder
             return null;
         }
 
-        File dir = new File(Environment.getExternalStorageDirectory() + "/ChargeYourself/"+relativePath);
+        File dir = new File(Environment.getExternalStorageDirectory() + "/Fuzion/"+relativePath);
         dir.mkdir();
         return dir;
         //return new File(Environment.getExternalStorageDirectory()+ "/mba_sadhana/");

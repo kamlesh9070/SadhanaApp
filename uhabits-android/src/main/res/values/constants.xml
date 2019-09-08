@@ -48,7 +48,7 @@
     </string-array>
 
     <string-array name="mba_center" translatable="false">
-        <item>Select MBA Center</item>
+        <item>Select Center</item>
         <item>Ahmedabad - Naroda</item>
         <item>Ahmedabad - Varun</item>
         <item>Ankleshwar</item>

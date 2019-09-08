@@ -135,18 +135,18 @@ public class IntroActivity extends AppIntro2
 
 
     void performLoadInitData() {
-        Object[][] habits = new Object[5][];
+        Object[][] habits = new Object[4][];
         // Also change in Config.java
-        Object[] kalams = new Object[]{"9 Kalams","Have you completed Nine Kalams?",0};
-        Object[] satsang = new Object[]{"Satsang","Have you attended Satsang?",5};
-        Object[] vanchan = new Object[]{"Vanchan","Have you completed min. 2 pages Vanchan?",19};
-        Object[] vinay = new Object[]{"Touch feet of Mom Dad","Have you completed Touch feet of Mom Dad?",11};
-        Object[] noMobile = new Object[]{"No Gadgets Gaming","How many hours you have done today Seva?",8};
-        habits[0] = kalams;
-        habits[1] = satsang;
-        habits[2] = vanchan;
-        habits[3] = vinay;
-        habits[4] = noMobile;
+        Object[] kalams = new Object[]{"9 Kalams","Recite all Nine Kalams once",0};
+        Object[] satsang = new Object[]{"Satsang/Book Reading","Read 1 page from any Dada's Book or Watch 5mins of Dada's Satsang Video",5};
+        //Object[] vanchan = new Object[]{"Vanchan","Have you completed min. 2 pages Vanchan?",19};
+        Object[] vinay = new Object[]{"Ashirwad of Mom Dad","Touch Feets and take Ashirwad from Mother-Father",11};
+        Object[] noMobile = new Object[]{"No Gadgets Gaming","Not playing Mobile games, Video games, PS-2, Computer or Mobile Puzzles, etc.",8};
+        habits[0] = vinay;
+        habits[1] = kalams;
+        habits[2] = satsang;
+        //habits[2] = vanchan;
+        habits[3] = noMobile;
         int i = 0;
 
         List<String> createdHabitName = new ArrayList<String>();

@@ -181,7 +181,7 @@ public class ListHabitsMenuBehavior
         File outputDir = dirFinder.getCSVOutputDir();
         String sadhanaFileName = "";
         if(preferences.getFirstName() != null)
-            sadhanaFileName = "" + preferences.getFirstName() + "_" + preferences.getLastName() + "_" + preferences.getMahatmaId();
+            sadhanaFileName = "" + preferences.getFirstName() + "_" + preferences.getLastName(); //+ "_" + preferences.getMahatmaId();
         //screen.showMonthPicker(sadhanaFileName, outputDir.getAbsolutePath(), new ListHabitsBehavior.MonthPickerCallback() {
         //    @Override
         //    public void onDateSet(int year, int month, String saveFilename) {

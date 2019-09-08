@@ -34,7 +34,7 @@ public class Config
     public static final String VANCHAN_NAME = "Vanchan";
 
     static {
-        String[] tempSadhanas = new String[]{"9 Kalams","Satsang","Vanchan","Touch feet of Mom Dad","No Gadgets Gaming"};
+        String[] tempSadhanas = new String[]{"9 Kalams","Satsang/Book Reading","Ashirwad of Mom Dad","No Gadgets Gaming"};
         for(String sadhana : tempSadhanas)
             SADHANAS.add(sadhana);
     }
