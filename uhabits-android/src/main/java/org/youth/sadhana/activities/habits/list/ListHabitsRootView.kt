@@ -20,6 +20,8 @@
 package org.youth.sadhana.activities.habits.list
 
 import android.content.*
+import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Build.VERSION.*
 import android.os.Build.VERSION_CODES.*
 import android.support.v7.widget.Toolbar
@@ -36,6 +38,7 @@ import org.youth.sadhana.core.ui.screens.habits.list.HintListFactory
 import org.youth.sadhana.core.utils.*
 import org.youth.sadhana.utils.*
 import java.lang.Math.*
+import java.util.*
 import javax.inject.*
 
 const val MAX_CHECKMARK_COUNT = 60
@@ -57,12 +60,16 @@ class ListHabitsRootView @Inject constructor(
     val progressBar = TaskProgressBar(context, runner)
     val hintView: HintView
     val header = HeaderView(context, preferences, midnightTimer)
-
+    val fuzionView: TextView
     init {
         val hints = resources.getStringArray(R.array.hints)
         val hintList = hintListFactory.create(hints)
         hintView = HintView(context, hintList)
-
+        fuzionView = TextView(context).apply {
+            setTextColor(Color.BLACK)
+            setTypeface(null, Typeface.BOLD)
+            text = "Charge Yourself Dates: 15th Sep to 12th Oct"
+        }
         addView(RelativeLayout(context).apply {
             background = sres.getDrawable(R.attr.windowBackgroundColor)
             addAtTop(tbar)
@@ -73,6 +80,7 @@ class ListHabitsRootView @Inject constructor(
             addBelow(progressBar, header) {
                 it.topMargin = dp(-6.0f).toInt()
             }
+            addAtBottom(fuzionView)
             addAtBottom(hintView)
             if (SDK_INT < LOLLIPOP) {
                 addBelow(ShadowView(context), tbar)

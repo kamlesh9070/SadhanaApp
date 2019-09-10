@@ -336,6 +336,7 @@ public abstract class MonthView extends View {
         mHasToday = false;
         mToday = -1;
 
+
         mCalendar.set(Calendar.MONTH, mMonth);
         mCalendar.set(Calendar.YEAR, mYear);
         mCalendar.set(Calendar.DAY_OF_MONTH, 1);

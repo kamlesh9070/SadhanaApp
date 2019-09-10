@@ -43,13 +43,14 @@
                 style="@style/Card"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
-                android:background="@color/red_900"
+                android:background="@color/white"
+                android:elevation="10dp"
                 android:gravity="center">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/about_logo" />
+                    android:src="@drawable/fuzion_logo" />
 
 
                 <!--                <TextView
