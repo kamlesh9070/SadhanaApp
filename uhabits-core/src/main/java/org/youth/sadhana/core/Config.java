@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Álinson Santos Xavier <isoron@gmail.com>
+ * Copyright (C) 2017 Alinson Santos Xavier <isoron@gmail.com>
  *
  * This file is part of Loop Habit Tracker.
  *
@@ -34,7 +34,7 @@ public class Config
     public static final String VANCHAN_NAME = "Vanchan";
 
     static {
-        String[] tempSadhanas = new String[]{"9 Kalams","Satsang/Book Reading","Ashirwad of Mom Dad","No Gadgets Gaming"};
+        String[] tempSadhanas = new String[]{"Aarti","Satsang/Book Reading","Ashirwad of Mom Dad","Pratikraman"};
         for(String sadhana : tempSadhanas)
             SADHANAS.add(sadhana);
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Álinson Santos Xavier <isoron@gmail.com>
+ * Copyright (C) 2016 Alinson Santos Xavier <isoron@gmail.com>
  *
  * This file is part of Loop Habit Tracker.
  *
@@ -137,13 +137,13 @@ public class IntroActivity extends AppIntro2
     void performLoadInitData() {
         Object[][] habits = new Object[4][];
         // Also change in Config.java
-        Object[] kalams = new Object[]{"9 Kalams","Recite all Nine Kalams once",0};
-        Object[] satsang = new Object[]{"Satsang/Book Reading","Read 1 page from any Dada's Book or Watch 5mins of Dada's Satsang Video",5};
+        Object[] aarti = new Object[]{"Aarti","પરિવાર સાથે આરતી કરીએ.\nDo Aarti with your Family.\nअपने  परिवार  के  साथ  आरती करे.",0};
+        Object[] satsang = new Object[]{"Satsang/Book Reading","સત્સંગ વિડિયો 10 મિનિટ માટે/દાદાની પુસ્તકનું વાંચન.\nSatsang Videos for 10mins/Dada's Book Reading.\nसत्संग  वीडियो  १० मिनट  तक / दादाजी की पुस्तक पठना.",5};
         //Object[] vanchan = new Object[]{"Vanchan","Have you completed min. 2 pages Vanchan?",19};
-        Object[] vinay = new Object[]{"Ashirwad of Mom Dad","Touch Feets and take Ashirwad from Mother-Father",11};
-        Object[] noMobile = new Object[]{"No Gadgets Gaming","Not playing Mobile games, Video games, PS-2, Computer or Mobile Puzzles, etc.",8};
+        Object[] vinay = new Object[]{"Ashirwad of Mom Dad","માતા - પિતા ને પગે લાગવું.\nTouch Feets and take Ashirwad from Mother-Father.\nमाता  पिता  के  पैर  छुए.",11};
+        Object[] noMobile = new Object[]{"Pratikraman","માતા - પિતા/ મિત્રો ના પ્રતિક્રમણ.\nDo - Pratikraman related to Parents/Friends.\nमाता-पिता / दोस्तों  के  प्रतिक्रमण.",8};
         habits[0] = vinay;
-        habits[1] = kalams;
+        habits[1] = aarti;
         habits[2] = satsang;
         //habits[2] = vanchan;
         habits[3] = noMobile;

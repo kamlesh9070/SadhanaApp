@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Álinson Santos Xavier <isoron@gmail.com>
+ * Copyright (C) 2017 Alinson Santos Xavier <isoron@gmail.com>
  *
  * This file is part of Loop Habit Tracker.
  *
@@ -187,7 +187,7 @@ public class ListHabitsMenuBehavior
         //    public void onDateSet(int year, int month, String saveFilename) {
                 GregorianCalendar startCal = DateUtils.getStartOfTodayCalendar();
                 // 15 Sep
-                startCal.set(Calendar.MONTH, 8);startCal.set(Calendar.DATE, 15);startCal.set(Calendar.YEAR, 2019);
+                startCal.set(Calendar.MONTH, 9);startCal.set(Calendar.DATE, 19);startCal.set(Calendar.YEAR, 2020);
                 //startCal.set(Calendar.MONTH, month-1);
                 //startCal.set(Calendar.YEAR, year);
                 //startCal.set(GregorianCalendar.DAY_OF_MONTH,1);
@@ -195,7 +195,7 @@ public class ListHabitsMenuBehavior
                 //startCal.set(GregorianCalendar.DAY_OF_MONTH, startCal.getActualMaximum(GregorianCalendar.DAY_OF_MONTH));
                 GregorianCalendar endCal = DateUtils.getStartOfTodayCalendar();
                 // 12 Oct
-                endCal.set(Calendar.MONTH, 9);endCal.set(Calendar.DATE, 12);endCal.set(Calendar.YEAR, 2019);
+                endCal.set(Calendar.MONTH, 9);endCal.set(Calendar.DATE, 25);endCal.set(Calendar.YEAR, 2020);
                 Timestamp toDate = new Timestamp(endCal);
                 outputDir.mkdir();
                 taskRunner.execute(

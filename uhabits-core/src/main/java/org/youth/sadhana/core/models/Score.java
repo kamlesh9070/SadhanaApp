@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Álinson Santos Xavier <isoron@gmail.com>
+ * Copyright (C) 2016 Alinson Santos Xavier <isoron@gmail.com>
  *
  * This file is part of Loop Habit Tracker.
  *
@@ -65,8 +65,11 @@ public final class Score
     {
         //double multiplier = pow(0.5, frequency / 13.0);
 
-        double multiplier = pow(0.4, frequency / 14.0);
+        //double multiplier = pow(0.4, frequency / 3.0);
+        double multiplier = pow(0.6, frequency / 1.0);
+        System.out.println("############### multiplier" + multiplier);
         double score = previousScore * multiplier;
+        System.out.println("############### score" + score);
         score += checkmarkValue * (1 - multiplier);
 
         return score;

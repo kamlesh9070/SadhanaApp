@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Álinson Santos Xavier
+ * Copyright (C) 2017 Alinson Santos Xavier
  *
  * This file is part of Loop Habit Tracker.
  *

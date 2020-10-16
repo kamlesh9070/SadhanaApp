@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Álinson Santos Xavier <isoron@gmail.com>
+ * Copyright (C) 2016 Alinson Santos Xavier <isoron@gmail.com>
  *
  * This file is part of Loop Habit Tracker.
  *
@@ -68,7 +68,7 @@ class ListHabitsRootView @Inject constructor(
         fuzionView = TextView(context).apply {
             setTextColor(Color.BLACK)
             setTypeface(null, Typeface.BOLD)
-            text = "Charge Yourself Dates: 15th Sep to 12th Oct"
+            text = "Charge Yourself Dates: 19th Oct to 25th Oct"
         }
         addView(RelativeLayout(context).apply {
             background = sres.getDrawable(R.attr.windowBackgroundColor)

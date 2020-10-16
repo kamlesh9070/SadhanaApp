@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (C) 2017 Álinson Santos Xavier <isoron@gmail.com>
+# Copyright (C) 2017 Alinson Santos Xavier <isoron@gmail.com>
 # This file is part of Loop Habit Tracker.
 #
 # Loop Habit Tracker is free software: you can redistribute it and/or modify

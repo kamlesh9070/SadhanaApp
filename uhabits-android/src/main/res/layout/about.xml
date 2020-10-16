@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (C) 2016 Álinson Santos Xavier <isoron@gmail.com>
+  ~ Copyright (C) 2016 Alinson Santos Xavier <isoron@gmail.com>
   ~
   ~ This file is part of Loop Habit Tracker.
   ~
@@ -166,7 +166,7 @@
 
                 <TextView
                     style="@style/About.Item"
-                    android:text="Álinson Xavier" />
+                    android:text="Alinson Xavier" />
 
                 <TextView
                     style="@style/About.Item"
@@ -306,7 +306,7 @@
 
                 <TextView
                     style="@style/About.Item"
-                    android:text="Álinson Xavier (Português)" />
+                    android:text="Alinson Xavier (Português)" />
 
                 <TextView
                     style="@style/About.Item"
