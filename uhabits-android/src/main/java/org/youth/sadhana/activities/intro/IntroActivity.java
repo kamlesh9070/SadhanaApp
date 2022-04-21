@@ -100,7 +100,7 @@ public class IntroActivity extends AppIntro2
             Color.parseColor("#357EC7")));
 
         initDependencies();
-        performLoadInitData();
+//        performLoadInitData();
         //createDialog().show();
     }
 

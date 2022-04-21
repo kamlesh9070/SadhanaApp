@@ -140,7 +140,7 @@ public class HabitExcelExporter {
                         row.add("");
                     totals[j] = totals[j] + value;
                     //Seva Remark
-                    /*if(selectedHabits.get(j).getName().equalsIgnoreCase(Config.SEVA_NAME)) {
+                    /*(selectedHabits.get(j).getName().equalsIgnoreCase(Config.SEVA_NAME)) {
                         String remark = checkmark.getRemark();
                         row.add(remark);
                     }*/

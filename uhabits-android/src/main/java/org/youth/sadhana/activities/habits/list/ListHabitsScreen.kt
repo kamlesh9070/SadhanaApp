@@ -19,36 +19,43 @@
 
 package org.youth.sadhana.activities.habits.list
 
-import android.app.*
-import android.content.ActivityNotFoundException
-import android.support.annotation.*
-import dagger.*
-import org.youth.androidbase.activities.*
-import org.youth.androidbase.utils.*
-import org.youth.sadhana.*
+import android.app.Activity
+import android.app.AlertDialog
+import android.content.Intent
+import android.os.Build
+import android.os.Bundle
+import android.support.annotation.StringRes
+import android.text.Html
+import dagger.Lazy
+import org.youth.androidbase.activities.ActivityScope
+import org.youth.androidbase.activities.BaseActivity
+import org.youth.androidbase.activities.BaseScreen
+import org.youth.androidbase.utils.FileUtils
+import org.youth.sadhana.R
 import org.youth.sadhana.activities.common.dialogs.*
-import org.youth.sadhana.activities.habits.edit.*
-import org.youth.sadhana.activities.habits.list.views.*
+import org.youth.sadhana.activities.habits.edit.EditHabitDialog
+import org.youth.sadhana.activities.habits.edit.EditHabitDialogFactory
+import org.youth.sadhana.activities.habits.goal.EditGoalDialog
+import org.youth.sadhana.activities.habits.list.views.HabitCardListAdapter
 import org.youth.sadhana.activities.intro.LoginFragment
 import org.youth.sadhana.core.commands.*
-import org.youth.sadhana.core.models.*
-import org.youth.sadhana.core.preferences.*
-import org.youth.sadhana.core.tasks.*
-import org.youth.sadhana.core.ui.*
-import org.youth.sadhana.core.ui.callbacks.*
-import org.youth.sadhana.core.ui.screens.habits.list.*
+import org.youth.sadhana.core.models.Habit
+import org.youth.sadhana.core.preferences.Preferences
+import org.youth.sadhana.core.tasks.TaskRunner
+import org.youth.sadhana.core.ui.ThemeSwitcher
+import org.youth.sadhana.core.ui.callbacks.OnColorPickedCallback
+import org.youth.sadhana.core.ui.callbacks.OnConfirmedCallback
+import org.youth.sadhana.core.ui.screens.habits.list.ListHabitsBehavior
 import org.youth.sadhana.core.ui.screens.habits.list.ListHabitsBehavior.Message.*
-import org.youth.sadhana.intents.*
-import org.youth.sadhana.tasks.*
-import java.io.*
-import javax.inject.*
-import android.content.Intent
-import android.net.Uri
-import android.os.Build
-import android.support.design.widget.Snackbar
-import android.support.v4.content.ContextCompat.startActivity
-import android.text.Html
-import android.view.View
+import org.youth.sadhana.core.ui.screens.habits.list.ListHabitsMenuBehavior
+import org.youth.sadhana.core.ui.screens.habits.list.ListHabitsSelectionMenuBehavior
+import org.youth.sadhana.intents.IntentFactory
+import org.youth.sadhana.tasks.ExportDBTaskFactory
+import org.youth.sadhana.tasks.ImportDataTask
+import org.youth.sadhana.tasks.ImportDataTaskFactory
+import java.io.File
+import java.io.IOException
+import javax.inject.Inject
 
 
 const val RESULT_IMPORT_DATA = 1
@@ -157,6 +164,13 @@ class ListHabitsScreen
 
     fun showCreateBooleanHabitScreen() {
         val dialog = editHabitDialogFactory.createBoolean()
+        activity.showDialog(dialog, "editHabit")
+    }
+
+    override fun showCreateGoalScreen() {
+        val dialog = EditGoalDialog()
+        val args = Bundle()
+        dialog.arguments = args
         activity.showDialog(dialog, "editHabit")
     }
 

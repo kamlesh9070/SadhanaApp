@@ -19,8 +19,8 @@
   -->
 
 <resources>
-    <string name="app_name">Fuzion</string>
-    <string name="main_activity_title">Fuzion</string>
+    <string name="app_name">Nischay</string>
+    <string name="main_activity_title">Nischay</string>
     <string name="action_settings">Settings</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
@@ -60,6 +60,8 @@
     <string name="validation_name_should_not_be_same">Activity with this name is already present.Pls give another name.</string>
     <string name="validation_number_should_be_positive">Number must be positive.</string>
     <string name="validation_at_most_one_rep_per_day">You can have at most one repetition per day</string>
+    <string name="create_goal">Nischay</string>
+    <string name="edit_goal">Nischay</string>
     <string name="create_habit">Create Activity</string>
     <string name="edit_habit">Edit Activity</string>
     <string name="check">Check</string>

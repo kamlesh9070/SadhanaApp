@@ -19,27 +19,34 @@
 
 package org.youth.sadhana.activities.habits.list
 
-import android.content.*
+import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
-import android.os.Build.VERSION.*
-import android.os.Build.VERSION_CODES.*
+import android.os.Build.VERSION.SDK_INT
+import android.os.Build.VERSION_CODES.LOLLIPOP
 import android.support.v7.widget.Toolbar
-import android.view.ViewGroup.LayoutParams.*
-import android.widget.*
-import org.youth.androidbase.activities.*
-import org.youth.sadhana.*
-import org.youth.sadhana.activities.common.views.*
+import android.util.TypedValue
+import android.view.View
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
+import android.widget.RelativeLayout
+import android.widget.TextView
+import org.youth.androidbase.activities.ActivityContext
+import org.youth.androidbase.activities.ActivityScope
+import org.youth.androidbase.activities.BaseRootView
+import org.youth.sadhana.R
+import org.youth.sadhana.activities.common.views.ScrollableChart
+import org.youth.sadhana.activities.common.views.TaskProgressBar
 import org.youth.sadhana.activities.habits.list.views.*
-import org.youth.sadhana.core.models.*
-import org.youth.sadhana.core.preferences.*
-import org.youth.sadhana.core.tasks.*
+import org.youth.sadhana.core.models.ModelObservable
+import org.youth.sadhana.core.preferences.Preferences
+import org.youth.sadhana.core.tasks.TaskRunner
+import org.youth.sadhana.core.ui.ThemeSwitcher
 import org.youth.sadhana.core.ui.screens.habits.list.HintListFactory
-import org.youth.sadhana.core.utils.*
+import org.youth.sadhana.core.utils.MidnightTimer
 import org.youth.sadhana.utils.*
-import java.lang.Math.*
-import java.util.*
-import javax.inject.*
+import java.lang.Math.max
+import java.lang.Math.min
+import javax.inject.Inject
 
 const val MAX_CHECKMARK_COUNT = 60
 
@@ -66,21 +73,28 @@ class ListHabitsRootView @Inject constructor(
         val hintList = hintListFactory.create(hints)
         hintView = HintView(context, hintList)
         fuzionView = TextView(context).apply {
-            setTextColor(Color.BLACK)
+            if (preferences.theme == ThemeSwitcher.THEME_LIGHT)  setTextColor(Color.BLACK) else setTextColor(Color.WHITE)
+            textAlignment = View.TEXT_ALIGNMENT_CENTER
             setTypeface(null, Typeface.BOLD)
-            text = "Charge Yourself Dates: 19th Oct to 25th Oct"
+            setTextSize(TypedValue.COMPLEX_UNIT_SP,20f)
+            text = if (preferences.goal == null || preferences.goal.trim({ it <= ' ' }).isEmpty()) "Add your Nischay from menu at top." else preferences.goal
         }
         addView(RelativeLayout(context).apply {
             background = sres.getDrawable(R.attr.windowBackgroundColor)
             addAtTop(tbar)
-
             addBelow(header, tbar)
-            addBelow(listView, header, height = MATCH_PARENT)
+
+//            addBelow(fuzionView, header)
+            addBelow(listView, header, height = MATCH_PARENT) {
+                it.topMargin = dp(55.0f).toInt()
+            }
             addBelow(llEmpty, header, height = MATCH_PARENT)
             addBelow(progressBar, header) {
                 it.topMargin = dp(-6.0f).toInt()
             }
-            addAtBottom(fuzionView)
+            addBelow(fuzionView, progressBar) {
+                it.topMargin = dp(6.0f).toInt()
+            }
             addAtBottom(hintView)
             if (SDK_INT < LOLLIPOP) {
                 addBelow(ShadowView(context), tbar)

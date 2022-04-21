@@ -111,6 +111,10 @@ class ListHabitsMenu @Inject constructor(
             }
 
 
+            R.id.actionGoal -> {
+                behavior.onCreateGoal()
+                return true
+            }
             R.id.actionAdd -> {
                 behavior.onCreateHabit()
                 return true

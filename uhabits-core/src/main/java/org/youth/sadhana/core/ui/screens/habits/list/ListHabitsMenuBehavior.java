@@ -87,6 +87,10 @@ public class ListHabitsMenuBehavior
         updateAdapterFilter();
     }
 
+    public void onCreateGoal() {
+        screen.showCreateGoalScreen();
+    }
+
     public void onCreateHabit()
     {
         screen.showCreateHabitScreen();
@@ -172,48 +176,52 @@ public class ListHabitsMenuBehavior
     public void onExportCSV()
     {
         List<Habit> selected = new LinkedList<>();
-        List<String> sadhanas = Config.SADHANAS;
+        /*List<String> sadhanas = Config.SADHANAS;
         for (String sadhana : sadhanas) {
             Habit habit = getHabit(habitList,sadhana);
             if(habit != null)
                 selected.add(habit);
+        }*/
+        for(Habit habit : habitList) {
+            selected.add(habit);
         }
         File outputDir = dirFinder.getCSVOutputDir();
         String sadhanaFileName = "";
         if(preferences.getFirstName() != null)
             sadhanaFileName = "" + preferences.getFirstName() + "_" + preferences.getLastName(); //+ "_" + preferences.getMahatmaId();
-        //screen.showMonthPicker(sadhanaFileName, outputDir.getAbsolutePath(), new ListHabitsBehavior.MonthPickerCallback() {
-        //    @Override
-        //    public void onDateSet(int year, int month, String saveFilename) {
+        screen.showMonthPicker(sadhanaFileName, outputDir.getAbsolutePath(), new ListHabitsBehavior.MonthPickerCallback() {
+            @Override
+            public void onDateSet(int year, int month, String saveFilename) {
                 GregorianCalendar startCal = DateUtils.getStartOfTodayCalendar();
-                // 15 Sep
-                startCal.set(Calendar.MONTH, 9);startCal.set(Calendar.DATE, 19);startCal.set(Calendar.YEAR, 2020);
-                //startCal.set(Calendar.MONTH, month-1);
-                //startCal.set(Calendar.YEAR, year);
-                //startCal.set(GregorianCalendar.DAY_OF_MONTH,1);
+                /*// 15 Sep
+                startCal.set(Calendar.MONTH, 9);startCal.set(Calendar.DATE, 19);startCal.set(Calendar.YEAR, 2020);*/
+                startCal.set(Calendar.MONTH, month-1);
+                startCal.set(Calendar.YEAR, year);
+                startCal.set(GregorianCalendar.DAY_OF_MONTH,1);
                 Timestamp fromDate = new Timestamp(startCal);
-                //startCal.set(GregorianCalendar.DAY_OF_MONTH, startCal.getActualMaximum(GregorianCalendar.DAY_OF_MONTH));
-                GregorianCalendar endCal = DateUtils.getStartOfTodayCalendar();
+                startCal.set(GregorianCalendar.DAY_OF_MONTH, startCal.getActualMaximum(GregorianCalendar.DAY_OF_MONTH));
+//                GregorianCalendar endCal = DateUtils.getStartOfTodayCalendar();
                 // 12 Oct
-                endCal.set(Calendar.MONTH, 9);endCal.set(Calendar.DATE, 25);endCal.set(Calendar.YEAR, 2020);
-                Timestamp toDate = new Timestamp(endCal);
+//                endCal.set(Calendar.MONTH, 9);endCal.set(Calendar.DATE, 25);endCal.set(Calendar.YEAR, 2020);
+                Timestamp toDate = new Timestamp(startCal);
                 outputDir.mkdir();
                 taskRunner.execute(
                         new ExportCSVTask(habitList, selected, outputDir, filename ->
+//                        new ExportCSVTask(habitList, selected, outputDir, filename ->
                         {
                             if (filename != null) {
                                 if(isShare)
                                     screen.showSendFileScreen(filename);
                                 else {
-                                    //screen.showMessage(ListHabitsBehavior.Message.EXPORT_SUCCESSFUL);
-                                    screen.showPopupMessage("File is saved successfully at " + filename);
+                                    screen.showMessage(ListHabitsBehavior.Message.EXPORT_SUCCESSFUL);
+//                                    screen.showPopupMessage("File is saved successfully at " + filename);
                                 }
 
                             }
                             else screen.showMessage(ListHabitsBehavior.Message.COULD_NOT_EXPORT);
-                        },fromDate,toDate,sadhanaFileName,preferences,true));
-            //}
-        //});
+                        },fromDate,toDate,saveFilename,preferences,true));
+            }
+        });
 
 
 
@@ -255,6 +263,8 @@ public class ListHabitsMenuBehavior
         void showProfileScreen();
 
         void showCreateHabitScreen();
+
+        void showCreateGoalScreen();
 
         void showFAQScreen();
 

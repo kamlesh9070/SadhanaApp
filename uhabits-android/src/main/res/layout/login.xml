@@ -52,7 +52,7 @@
             android:layout_height="122dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
-            android:src="@drawable/fuzion_logo" />
+            android:src="@drawable/profile_logo" />
 
         <TextView
             android:layout_width="wrap_content"

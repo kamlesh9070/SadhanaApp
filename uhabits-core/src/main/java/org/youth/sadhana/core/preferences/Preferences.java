@@ -231,6 +231,14 @@ public class Preferences
         storage.putBoolean("pref_first_run", isFirstRun);
     }
 
+
+    public String getGoal() {
+        return storage.getString("goal", "");
+    }
+    public void setGoal(String goal) {
+        storage.putString("goal",goal);
+    }
+
     public String getFirstName() {
         return storage.getString("first_name", "");
     }

@@ -22,6 +22,13 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context=".MainActivity">
 
+
+    <item
+        android:id="@+id/actionGoal"
+        android:icon="?iconUnarchive"
+        android:title="@string/add_habit"
+        app:showAsAction="always"/>
+
     <item
         android:id="@+id/actionAdd"
         android:icon="?iconAdd"
